@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CHIPS TIJD!</title>
   <style>
     body {
@@ -31,20 +31,34 @@
 
   <h1>CHIPS TIJD!</h1>
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Potato-Chips.jpg" alt="Chips">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Potato-Chips.jpg" alt="Chips" />
 
   <div id="countdown"></div>
 
   <script>
+    function getNextFriday1430() {
+      const now = new Date();
+      const target = new Date(now);
+
+      // Zet tijd op 14:30:00
+      target.setHours(14, 30, 0, 0);
+
+      // Bereken hoeveel dagen tot vrijdag (5)
+      // getDay(): 0=Zondag, 1=Maandag, ..., 5=Vrijdag, 6=Zaterdag
+      let daysUntilFriday = 5 - target.getDay();
+
+      if (daysUntilFriday < 0 || (daysUntilFriday === 0 && now >= target)) {
+        // Als vandaag na vrijdag is of al voorbij 14:30 op vrijdag, ga naar volgende vrijdag
+        daysUntilFriday += 7;
+      }
+
+      target.setDate(target.getDate() + daysUntilFriday);
+      return target;
+    }
+
     function updateCountdown() {
       const now = new Date();
-      const target = new Date();
-      target.setHours(14, 30, 0, 0); // 14:30
-
-      // Als het al na 14:30 is vandaag, zet het op morgen
-      if (now > target) {
-        target.setDate(target.getDate() + 1);
-      }
+      const target = getNextFriday1430();
 
       const diff = target - now;
 
