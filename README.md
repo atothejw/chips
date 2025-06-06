@@ -1,6 +1,8 @@
 # 🕒 CHIPS TIJD!
 
-Een simpele maar vrolijke HTML-pagina die aftelt naar **half 3 's middags** – oftewel: **CHIPS TIJD!** 🥔🎉
+Een vrolijke HTML-pagina die aftelt naar **vrijdag om half 3 's middags** – oftewel: **CHIPS TIJD!** 🥔🎉
+
+Elke vrijdagmiddag is het moment om even te pauzeren en van chips te genieten. Deze pagina helpt je aftellen naar dat heilige moment!
 
 ---
 
@@ -8,8 +10,8 @@ Een simpele maar vrolijke HTML-pagina die aftelt naar **half 3 's middags** – 
 
 - Toont een grote koptekst: **CHIPS TIJD!**
 - Laat een afbeelding van chips zien
-- Telt realtime af naar 14:30 uur (half 3 's middags) op de huidige dag
-- Geeft een feestelijk bericht zodra het tijd is om chips te eten!
+- Telt realtime af naar **14:30 uur op de eerstvolgende vrijdag**
+- Laat een feestelijk bericht en eventueel animatie zien zodra het chips-tijd is
 
 ---
 
@@ -17,7 +19,7 @@ Een simpele maar vrolijke HTML-pagina die aftelt naar **half 3 's middags** – 
 
 ![Voorbeeld screenshot](screenshot.png)
 
-*(Voeg een eigen screenshot toe als je dit lokaal test.)*
+*(Je kunt een eigen screenshot toevoegen als je dit lokaal test.)*
 
 ---
 
